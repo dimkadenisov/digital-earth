@@ -1,0 +1,8 @@
+mixin products-group-name(props = {})
+  include products-counter
+
+  - const { counter, name, } = props;
+
+  .products-group-name&attributes(attributes)
+    +products-counter= counter
+    span.products-group-name__text= name

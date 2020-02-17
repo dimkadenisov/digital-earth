@@ -1,0 +1,8 @@
+mixin product(props = {})
+
+  - const { iconId, text, } = props;
+
+  a(href="#").product&attributes(attributes)
+    svg.product__icon
+      use(xlink:href=`#${iconId}`)
+    .product__text= text

@@ -1,0 +1,17 @@
+.services-list {
+	display: flex;
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		width: calc((100% - 2 * 30px) / 3);
+
+		&:nth-last-child(n + 1) {
+			margin-right: 30px;
+		}
+	}
+
+	&__item {
+		margin-bottom: 20px;
+	}
+}

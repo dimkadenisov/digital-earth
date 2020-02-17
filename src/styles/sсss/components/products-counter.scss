@@ -1,0 +1,38 @@
+.products-counter {
+	display: inline-block;
+	min-width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	color: $white;
+	font-weight: 700;
+	line-height: 40px;
+	text-align: center;
+
+	&_green {
+		background-color: $green-300;
+	}
+
+	&_mint {
+		background-color: $mint-300;
+	}
+
+	&_crimson {
+		background-color: $crimson-300;
+	}
+
+	&_burgundy {
+		background-color: $burgundy-300;
+	}
+
+	&_yellow {
+		background-color: $yellow-300;
+	}
+
+	&_salmon {
+		background-color: $salmon-300;
+	}
+
+	&_blue {
+		background-color: $blue-300;
+	}
+}

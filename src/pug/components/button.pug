@@ -1,0 +1,7 @@
+mixin button(props = {})
+
+  - const { tag = 'button'} = props
+
+  #{tag}.button&attributes(attributes)
+    span.button__text
+      block

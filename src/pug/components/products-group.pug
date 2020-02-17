@@ -1,0 +1,9 @@
+mixin products-group(props = {})
+  include products-group-name
+  include products-list
+
+  - const { counter, name, products } = props;
+
+  .products-group&attributes(attributes)
+    +products-group-name({counter: counter, name: name})
+    +products-list({products: products})

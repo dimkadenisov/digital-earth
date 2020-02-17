@@ -1,0 +1,18 @@
+mixin service-card(props = {})
+  include service-card-name
+  include service-card-img
+  include products-group
+  include button
+
+  - const { imgObjectFit, imgSrc, name, productsGroups } = props;
+
+  - const imgAttrs = imgObjectFit === 'cover' ? {class: 'service-card-img_cover'} : null
+
+  .service-card&attributes(attributes)
+    .service-card__content
+      +service-card-img(src= imgSrc, alt= name data-object-fit= imgObjectFit)&attributes(imgAttrs)
+      +service-card-name= name
+      div
+        each props in productsGroups
+          +products-group(props)
+      div.hidden-block

@@ -1,0 +1,13 @@
+.service-card-img {
+	// position: relative;
+	// max-width: 100%;
+	// width: 100%;
+	object-fit: contain;
+
+	&_cover {
+		margin-top: -15px;
+		margin-right: -30px;
+		margin-left: -30px;
+		object-fit: cover;
+	}
+}
