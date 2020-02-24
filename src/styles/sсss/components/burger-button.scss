@@ -1,0 +1,18 @@
+.burger-button {
+	display: none;
+	font-size: 30px;
+	color: $gray-800;
+	cursor: pointer;
+	z-index: 2;
+
+	&:hover,
+	&:focus {
+		color: $primary;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.burger-button {
+		display: inline-block;
+	}
+}

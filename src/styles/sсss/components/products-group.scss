@@ -1,0 +1,13 @@
+.products-group {
+	margin-bottom: 0;
+
+	.products-list {
+		margin-left: 12px;
+	}
+
+	&_opened {
+		.products-group-name {
+			margin-bottom: 15px;
+		}
+	}
+}

@@ -4,15 +4,18 @@ mixin services-list(props = {})
   .services-list&attributes(attributes)
 
     .services-list__column
-      .services-list__item
+      .services-list__item(data-column="0")
         +service-card({
+          size: 'l',
           imgObjectFit: 'cover',
           imgSrc: 'assets/img/forest.svg',
           name: 'Лес-контроль',
           productsGroups: [
             {
               counter: 3,
+              counterColor: 'green',
               name: 'Базовых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
               products: [
                 {
                   iconId: 'tree',
@@ -30,7 +33,9 @@ mixin services-list(props = {})
             },
             {
               counter: 3,
+              counterColor: 'green',
               name: 'Мониторинговых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
               products: [
                 {
                   iconId: 'tree',
@@ -48,15 +53,19 @@ mixin services-list(props = {})
             },
           ],
         })(class="service-card_size_l")
-      .services-list__item
+
+      .services-list__item(data-column="0")
         +service-card({
+          size: 'l',
           imgObjectFit: 'cover',
-          imgSrc: 'assets/img/kanban.svg',
+          imgSrc: 'assets/img/mountains.svg',
           name: 'Сельхоз-мониторинг',
           productsGroups: [
             {
               counter: 3,
+              counterColor: 'yellow',
               name: 'Базовых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
               products: [
                 {
                   iconId: 'tree',
@@ -74,231 +83,9 @@ mixin services-list(props = {})
             },
             {
               counter: 3,
+              counterColor: 'yellow',
               name: 'Мониторинговых продуктов',
-              products: [
-                {
-                  iconId: 'tree',
-                  text: 'Информация о естественных изменениях в лесном фонде',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Информация о хозяственной деятельности в лесном фонде',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Информация о незаконной деятельности в лесном фонде',
-                },
-              ]
-            },
-          ],
-        })(class="service-card_size_m")
-
-    .services-list__column
-      .services-list__item
-        +service-card({
-          imgObjectFit: 'contain',
-          imgSrc: 'assets/img/garbage.svg',
-          name: 'Эко-мониторинг',
-          productsGroups: [
-            {
-              counter: 3,
-              name: 'Базовых продуктов',
-              products: [
-                {
-                  iconId: 'tree',
-                  text: 'Лесопокрытые площадки',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Ситауционные карты местности',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Оценка параметров лесного фонда',
-                },
-              ]
-            },
-            {
-              counter: 3,
-              name: 'Мониторинговых продуктов',
-              products: [
-                {
-                  iconId: 'tree',
-                  text: 'Информация о естественных изменениях в лесном фонде',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Информация о хозяственной деятельности в лесном фонде',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Информация о незаконной деятельности в лесном фонде',
-                },
-              ]
-            },
-          ],
-        })
-      .services-list__item
-        +service-card({
-          imgObjectFit: 'contain',
-          imgSrc: 'assets/img/celsus.png',
-          name: 'Чрезвычайные ситуации',
-          productsGroups: [
-            {
-              counter: 3,
-              name: 'Базовых продуктов',
-              products: [
-                {
-                  iconId: 'tree',
-                  text: 'Лесопокрытые площадки',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Ситауционные карты местности',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Оценка параметров лесного фонда',
-                },
-              ]
-            },
-            {
-              counter: 3,
-              name: 'Мониторинговых продуктов',
-              products: [
-                {
-                  iconId: 'tree',
-                  text: 'Информация о естественных изменениях в лесном фонде',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Информация о хозяственной деятельности в лесном фонде',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Информация о незаконной деятельности в лесном фонде',
-                },
-              ]
-            },
-          ],
-        })(class="service-card_celsus")
-      .services-list__item
-        +service-card({
-          imgObjectFit: 'contain',
-          imgSrc: 'assets/img/builders.svg',
-          name: 'Нарушенные земли',
-          productsGroups: [
-            {
-              counter: 3,
-              name: 'Базовых продуктов',
-              products: [
-                {
-                  iconId: 'tree',
-                  text: 'Лесопокрытые площадки',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Ситауционные карты местности',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Оценка параметров лесного фонда',
-                },
-              ]
-            },
-            {
-              counter: 3,
-              name: 'Мониторинговых продуктов',
-              products: [
-                {
-                  iconId: 'tree',
-                  text: 'Информация о естественных изменениях в лесном фонде',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Информация о хозяственной деятельности в лесном фонде',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Информация о незаконной деятельности в лесном фонде',
-                },
-              ]
-            },
-          ],
-        })
-
-    .services-list__column
-      .services-list__item
-        +service-card({
-          imgObjectFit: 'contain',
-          imgSrc: 'assets/img/building.svg',
-          name: 'Карьеры',
-          productsGroups: [
-            {
-              counter: 3,
-              name: 'Базовых продуктов',
-              products: [
-                {
-                  iconId: 'tree',
-                  text: 'Лесопокрытые площадки',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Ситауционные карты местности',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Оценка параметров лесного фонда',
-                },
-              ]
-            },
-            {
-              counter: 3,
-              name: 'Мониторинговых продуктов',
-              products: [
-                {
-                  iconId: 'tree',
-                  text: 'Информация о естественных изменениях в лесном фонде',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Информация о хозяственной деятельности в лесном фонде',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Информация о незаконной деятельности в лесном фонде',
-                },
-              ]
-            },
-          ],
-        })(class="service-card_size_m")
-      .services-list__item
-        +service-card({
-          imgObjectFit: 'cover',
-          imågSrc: 'assets/img/building.svg',
-          name: 'Строй-контроль',
-          productsGroups: [
-            {
-              counter: 3,
-              name: 'Базовых продуктов',
-              products: [
-                {
-                  iconId: 'tree',
-                  text: 'Лесопокрытые площадки',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Ситауционные карты местности',
-                },
-                {
-                  iconId: 'tree',
-                  text: 'Оценка параметров лесного фонда',
-                },
-              ]
-            },
-            {
-              counter: 3,
-              name: 'Мониторинговых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
               products: [
                 {
                   iconId: 'tree',
@@ -316,3 +103,252 @@ mixin services-list(props = {})
             },
           ],
         })(class="service-card_size_l")
+
+    .services-list__column
+      .services-list__item(data-column="1")
+        +service-card({
+          imgObjectFit: 'contain',
+          imgSrc: 'assets/img/earth.svg',
+          name: 'Эко-мониторинг',
+          productsGroups: [
+            {
+              counter: 3,
+              counterColor: 'mint',
+              name: 'Базовых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
+              products: [
+                {
+                  iconId: 'tree',
+                  text: 'Лесопокрытые площадки',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Ситауционные карты местности',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Оценка параметров лесного фонда',
+                },
+              ]
+            },
+            {
+              counter: 3,
+              counterColor: 'mint',
+              name: 'Мониторинговых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
+              products: [
+                {
+                  iconId: 'tree',
+                  text: 'Информация о естественных изменениях в лесном фонде',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Информация о хозяственной деятельности в лесном фонде',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Информация о незаконной деятельности в лесном фонде',
+                },
+              ]
+            },
+          ],
+        })
+
+      .services-list__item(data-column="1")
+        +service-card({
+          imgObjectFit: 'contain',
+          imgSrc: 'assets/img/house-on-fire.svg',
+          name: 'Чрезвычайные ситуации',
+          productsGroups: [
+            {
+              counter: 3,
+              counterColor: 'crimson',
+              name: 'Базовых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
+              products: [
+                {
+                  iconId: 'tree',
+                  text: 'Лесопокрытые площадки',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Ситауционные карты местности',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Оценка параметров лесного фонда',
+                },
+              ]
+            },
+            {
+              counter: 3,
+              counterColor: 'crimson',
+              name: 'Мониторинговых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
+              products: [
+                {
+                  iconId: 'tree',
+                  text: 'Информация о естественных изменениях в лесном фонде',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Информация о хозяственной деятельности в лесном фонде',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Информация о незаконной деятельности в лесном фонде',
+                },
+              ]
+            },
+          ],
+        })
+
+      .services-list__item(data-column="1")
+        +service-card({
+          imgObjectFit: 'contain',
+          imgSrc: 'assets/img/dirt.svg',
+          name: 'Нарушенные земли',
+          productsGroups: [
+            {
+              counter: 3,
+              counterColor: 'burgundy',
+              name: 'Базовых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
+              products: [
+                {
+                  iconId: 'tree',
+                  text: 'Лесопокрытые площадки',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Ситауционные карты местности',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Оценка параметров лесного фонда',
+                },
+              ]
+            },
+            {
+              counter: 3,
+              counterColor: 'burgundy',
+              name: 'Мониторинговых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
+              products: [
+                {
+                  iconId: 'tree',
+                  text: 'Информация о естественных изменениях в лесном фонде',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Информация о хозяственной деятельности в лесном фонде',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Информация о незаконной деятельности в лесном фонде',
+                },
+              ]
+            },
+          ],
+        })
+
+    .services-list__column
+      .services-list__item(data-column="2")
+        +service-card({
+          size: 'm',
+          imgObjectFit: 'contain',
+          imgSrc: 'assets/img/truck.svg',
+          name: 'Карьеры',
+          productsGroups: [
+            {
+              counter: 3,
+              counterColor: 'salmon',
+              name: 'Базовых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
+              products: [
+                {
+                  iconId: 'tree',
+                  text: 'Лесопокрытые площадки',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Ситауционные карты местности',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Оценка параметров лесного фонда',
+                },
+              ]
+            },
+            {
+              counter: 3,
+              counterColor: 'salmon',
+              name: 'Мониторинговых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
+              products: [
+                {
+                  iconId: 'tree',
+                  text: 'Информация о естественных изменениях в лесном фонде',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Информация о хозяственной деятельности в лесном фонде',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Информация о незаконной деятельности в лесном фонде',
+                },
+              ]
+            },
+          ],
+        })(class="service-card_size_m")
+
+      .services-list__item(data-column="2")
+        +service-card({
+          size: 'xl',
+          imgObjectFit: 'cover',
+          imgSrc: 'assets/img/builders.svg',
+          name: 'Строй-контроль',
+          productsGroups: [
+            {
+              counter: 3,
+              counterColor: 'blue',
+              name: 'Базовых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
+              products: [
+                {
+                  iconId: 'tree',
+                  text: 'Лесопокрытые площадки',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Ситауционные карты местности',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Оценка параметров лесного фонда',
+                },
+              ]
+            },
+            {
+              counter: 3,
+              counterColor: 'blue',
+              name: 'Мониторинговых продуктов',
+              productslistAtrrs: {class: 'visually-hidden'},
+              products: [
+                {
+                  iconId: 'tree',
+                  text: 'Информация о естественных изменениях в лесном фонде',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Информация о хозяственной деятельности в лесном фонде',
+                },
+                {
+                  iconId: 'tree',
+                  text: 'Информация о незаконной деятельности в лесном фонде',
+                },
+              ]
+            },
+          ],
+        })(class="service-card_size_xl")

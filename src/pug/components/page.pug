@@ -14,12 +14,11 @@ html(lang="ru")
     block title
 
   body
-    //- object(data="assets/img/icons/sprite.svg" type="image/svg+xml" style="width: 0; height: 0; display: none;")
-    //- include ../../assets/icons/sprite/symbol/svg/sprite.symbol.svg
+    object(type="image/svg+xml" style="width: 0; height: 0; display: none;")
+      include ../../assets/icons/sprite/symbol/svg/sprite.symbol.svg
     +header
     block content
     //- +footer
 
     script(src="scripts/libraries/objectFitPolyfill.min.js")
-    script(src="scripts/libraries/masonry.min.js")
     script(src="scripts/script.js")

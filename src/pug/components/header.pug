@@ -1,6 +1,14 @@
 mixin header(props = {})
   include logo
+  include menu-list
+  include menu-list
+  include burger-button
+  include burger-menu
 
   .header&attributes(attributes)
-    .container.container_wide
-      +logo
+    .container
+      .header__inner
+        +logo
+        +burger-button
+        +burger-menu
+          +menu-list({items: ['Новости', 'Контакты', 'Войти']})

@@ -4,35 +4,46 @@
 	height: 40px;
 	border-radius: 20px;
 	color: $white;
+	font-size: 24px;
 	font-weight: 700;
 	line-height: 40px;
 	text-align: center;
 
-	&_green {
+	&_color_green {
 		background-color: $green-300;
 	}
 
-	&_mint {
-		background-color: $mint-300;
-	}
-
-	&_crimson {
-		background-color: $crimson-300;
-	}
-
-	&_burgundy {
-		background-color: $burgundy-300;
-	}
-
-	&_yellow {
+	&_color_yellow {
 		background-color: $yellow-300;
 	}
 
-	&_salmon {
+	&_color_mint {
+		background-color: $mint-300;
+	}
+
+	&_color_crimson {
+		background-color: $crimson-300;
+	}
+
+	&_color_burgundy {
+		background-color: $burgundy-300;
+	}
+
+	&_color_salmon {
 		background-color: $salmon-300;
 	}
 
-	&_blue {
+	&_color_blue {
 		background-color: $blue-300;
+	}
+}
+
+@media screen and (max-width: 409px) {
+	.products-counter {
+		min-width: 30px;
+		height: 30px;
+		border-radius: 15px;
+		font-size: 18px;
+		line-height: 30px;
 	}
 }

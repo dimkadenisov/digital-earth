@@ -1,5 +1,7 @@
 extends ../components/page
 include ../components/services-list
+include ../components/h1
+include ../components/heading-description
 
 block title
   |Главная страница
@@ -7,4 +9,9 @@ block title
 block content
   main
     .container
-      +services-list
+      section
+        +h1
+          |Уникальные сервисы
+        +heading-description
+          |на основе данных  дистанционного зондирования Земли из космоса
+        +services-list

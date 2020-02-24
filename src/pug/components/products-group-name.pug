@@ -1,8 +1,9 @@
 mixin products-group-name(props = {})
   include products-counter
 
-  - const { counter, name, } = props;
+  - const { counter, counterColor, name, } = props;
 
   .products-group-name&attributes(attributes)
-    +products-counter= counter
+    if counter
+      +products-counter(class=`products-counter_color_${counterColor}`)= counter
     span.products-group-name__text= name

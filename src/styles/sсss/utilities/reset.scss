@@ -4,7 +4,12 @@ html {
 	font-size: 14px;
 }
 
-body,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $gray-200;
+}
+
 ul,
 ol {
 	margin: 0;
@@ -56,6 +61,9 @@ select::-ms-expand {
 }
 
 h1,
-p {
+h2,
+h3,
+h4,
+h5 p {
 	margin-top: 0;
 }

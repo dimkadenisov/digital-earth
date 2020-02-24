@@ -1,0 +1,12 @@
+.buttons-group {
+	display: flex;
+	flex-wrap: wrap;
+
+	.button {
+		margin-bottom: 10px;
+
+		&:nth-last-child(n + 2) {
+			margin-right: 15px;
+		}
+	}
+}

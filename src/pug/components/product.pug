@@ -5,4 +5,4 @@ mixin product(props = {})
   a(href="#").product&attributes(attributes)
     svg.product__icon
       use(xlink:href=`#${iconId}`)
-    .product__text= text
+    span.product__text= text

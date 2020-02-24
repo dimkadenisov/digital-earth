@@ -1,7 +1,9 @@
 .product {
-	display: flex;
+	display: inline-flex;
+	color: $gray-600;
 	text-decoration: none;
 	opacity: 0.4;
+	transition: opacity 0.25s ease;
 
 	&__icon {
 		flex-shrink: 0;
@@ -13,5 +15,23 @@
 
 	&__text {
 		line-height: 1.25;
+	}
+
+	&:hover,
+	&:focus {
+		opacity: 1;
+	}
+
+	&_active {
+		color: $primary;
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 409px) {
+	.product {
+		&__icon {
+			margin-right: 15px;
+		}
 	}
 }

@@ -1,0 +1,178 @@
+.default-styles {
+	overflow: hidden;
+
+	p {
+		max-width: 100%;
+		margin-top: 0;
+		margin-bottom: 15px;
+		font-size: 16px;
+	}
+
+	figure {
+		display: flex;
+		margin: 0;
+
+		& > div {
+			margin-bottom: 24px;
+
+			&:nth-last-child(n + 2) {
+				margin-right: 24px;
+			}
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	ol {
+		margin: 0 0 40px 0;
+		font-size: 16px;
+
+		li {
+			position: relative;
+			margin-bottom: 15px;
+			padding-left: 50px;
+			line-height: 1.4;
+			counter-increment: step-counter;
+
+			&::before {
+				content: counter(step-counter);
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 30px;
+				color: $primary;
+				font-weight: 900;
+				font-size: 15px;
+				text-align: right;
+			}
+		}
+	}
+
+	ul {
+		margin: 0 0 40px 0;
+		font-size: 16px;
+
+		li {
+			position: relative;
+			margin-bottom: 15px;
+			padding-left: 50px;
+			line-height: 1.4;
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 8px;
+				left: 20px;
+				width: 6px;
+				height: 6px;
+				background-color: $primary;
+			}
+		}
+	}
+
+	a[class=''] {
+		color: $primary;
+
+		&:hover,
+		&:focus {
+			color: darken($primary, 10%);
+		}
+	}
+}
+
+.responsive-table {
+	max-width: 100%;
+	margin: 0 0 50px 0;
+	overflow-x: auto;
+}
+
+.responsive-table table,
+.tab-content table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.responsive-table table thead,
+.tab-content table thead {
+	background-color: $gray-200;
+	text-transform: uppercase;
+
+	& th {
+		color: $gray-400;
+	}
+}
+
+.responsive-table table tr,
+.tab-content table tr {
+	border-bottom: 1px solid $gray-200;
+}
+
+.responsive-table table th,
+.responsive-table table td,
+.tab-content table th,
+.tab-content table td {
+	padding: 16px 12px;
+	color: $gray-700;
+	font-size: 15px;
+	line-height: 24px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+@media screen and (min-width: 992px) {
+	.default-styles {
+		.image-right {
+			display: block;
+			float: right;
+			max-width: calc(50% - 24px);
+			margin: 0 0 24px 24px;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		.image-left {
+			display: block;
+			float: left;
+			max-width: calc(50% - 24px);
+			margin: 0 24px 24px 0;
+
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.default-styles {
+		figure {
+			flex-wrap: wrap;
+		}
+
+		.image-right {
+			margin: 0 0 24px 0;
+		}
+
+		.image-left {
+			margin: 0 0 24px 0;
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.default-styles {
+		figure {
+			& > div {
+				&:nth-last-child(n + 2) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

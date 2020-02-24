@@ -1,0 +1,32 @@
+@media screen and (max-width: 991px) {
+	.burger-menu {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 270px;
+		padding-top: 75px;
+		background-color: $white;
+		box-shadow: 0 0 15px 0 rgba($black, 0.3);
+		transform: translateX(100%);
+		transform-origin: top right;
+		transition: transform 0.3s ease;
+		opacity: 0;
+
+		.menu-list {
+			padding-right: 25px;
+			padding-left: 25px;
+			flex-direction: column;
+
+			&__item {
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+		}
+
+		&_opened {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+}

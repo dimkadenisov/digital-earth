@@ -1,0 +1,25 @@
+.collapse {
+	margin-bottom: 35px;
+
+	&__inner {
+		padding-right: 25px;
+		padding-left: 25px;
+		max-height: 0;
+		overflow: hidden;
+		transition: padding-top, max-height 0.25s ease;
+	}
+
+	&_opened {
+		.collapse-heading {
+			margin-bottom: 20px;
+		}
+
+		.collapse-heading__triangle {
+			transform: rotate(180deg);
+		}
+
+		.collapse__inner {
+			max-height: none;
+		}
+	}
+}

@@ -2,8 +2,8 @@ mixin products-group(props = {})
   include products-group-name
   include products-list
 
-  - const { counter, name, products } = props;
+  - const { counter, counterColor, name, products, prdouctsGroupNameAttrs, productslistAtrrs } = props;
 
   .products-group&attributes(attributes)
-    +products-group-name({counter: counter, name: name})
-    +products-list({products: products})
+    +products-group-name({counter: counter, counterColor: counterColor, name: name})&attributes(prdouctsGroupNameAttrs)
+    +products-list({products: products})&attributes(productslistAtrrs)

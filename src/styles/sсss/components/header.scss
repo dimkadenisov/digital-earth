@@ -1,4 +1,21 @@
 .header {
-	padding-top: 45px;
-	padding-bottom: 37px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: $gray-200;
+	z-index: 3;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&_scrolled {
+		background-color: $white;
+		box-shadow: 0 4px 16px 0 rgba($black, 0.08);
+	}
 }

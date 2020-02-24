@@ -1,0 +1,22 @@
+.collapse-heading {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0px;
+	padding-right: 25px;
+	padding-bottom: 17px;
+	padding-left: 25px;
+	border-bottom: 1px solid $gray-200;
+	color: $gray-800;
+	font-size: 24px;
+	cursor: pointer;
+	transition: marginBottom 1s linear;
+
+	&__triangle {
+		display: inline-block;
+		margin-top: 3px;
+		margin-left: 10px;
+		font-size: 14px;
+		line-height: 10px;
+		transition: transform 0.3s;
+	}
+}

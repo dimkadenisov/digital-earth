@@ -1,6 +1,11 @@
 mixin service-card-img(props = {})
 
-  img.service-card-img&attributes(attributes)
+  - const { size, imgObjectFit } = props;
+  -
+    const rootClassList = [
+      imgObjectFit && `service-card-img_${imgObjectFit}`,
+      size && `service-card-img_size_${size}`
+    ]
 
-  //- .service-card-img
-  //-   img.service-card-img__img&attributes(attributes)
+  .service-card-img(class= rootClassList)
+    img.service-card-img__img(data-object-position="top left" data-object-fit= imgObjectFit)&attributes(attributes)

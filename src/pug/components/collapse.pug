@@ -1,0 +1,9 @@
+mixin collapse(props = {})
+  include collapse-heading
+
+  - const { name } = props;
+
+  .collapse&attributes(attributes)
+    +collapse-heading= name
+    .collapse__inner
+      block
