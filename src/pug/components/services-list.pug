@@ -6,14 +6,12 @@ mixin services-list(props = {})
     .services-list__column
       .services-list__item(data-column="0")
         +service-card({
-          size: 'l',
           imgObjectFit: 'cover',
           imgSrc: 'assets/img/forest.svg',
           name: 'Лес-контроль',
           productsGroups: [
             {
               counter: 3,
-              counterColor: 'green',
               name: 'Базовых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -33,7 +31,6 @@ mixin services-list(props = {})
             },
             {
               counter: 3,
-              counterColor: 'green',
               name: 'Мониторинговых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -52,18 +49,15 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })(class="service-card_size_l")
+        })(class="service-card_size_l service-card_color_green")
 
       .services-list__item(data-column="0")
         +service-card({
-          size: 'l',
-          imgObjectFit: 'cover',
           imgSrc: 'assets/img/mountains.svg',
           name: 'Сельхоз-мониторинг',
           productsGroups: [
             {
               counter: 3,
-              counterColor: 'yellow',
               name: 'Базовых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -83,7 +77,6 @@ mixin services-list(props = {})
             },
             {
               counter: 3,
-              counterColor: 'yellow',
               name: 'Мониторинговых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -102,18 +95,16 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })(class="service-card_size_l")
+        })(class="service-card_size_l service-card_color_yellow")
 
     .services-list__column
       .services-list__item(data-column="1")
         +service-card({
-          imgObjectFit: 'contain',
           imgSrc: 'assets/img/earth.svg',
           name: 'Эко-мониторинг',
           productsGroups: [
             {
               counter: 3,
-              counterColor: 'mint',
               name: 'Базовых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -133,7 +124,6 @@ mixin services-list(props = {})
             },
             {
               counter: 3,
-              counterColor: 'mint',
               name: 'Мониторинговых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -152,17 +142,15 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })
+        })(class="service-card_color_mint")
 
       .services-list__item(data-column="1")
         +service-card({
-          imgObjectFit: 'contain',
           imgSrc: 'assets/img/house-on-fire.svg',
           name: 'Чрезвычайные ситуации',
           productsGroups: [
             {
               counter: 3,
-              counterColor: 'crimson',
               name: 'Базовых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -182,7 +170,6 @@ mixin services-list(props = {})
             },
             {
               counter: 3,
-              counterColor: 'crimson',
               name: 'Мониторинговых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -201,17 +188,15 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })
+        })(class="service-card_color_crimson")
 
       .services-list__item(data-column="1")
         +service-card({
-          imgObjectFit: 'contain',
           imgSrc: 'assets/img/dirt.svg',
           name: 'Нарушенные земли',
           productsGroups: [
             {
               counter: 3,
-              counterColor: 'burgundy',
               name: 'Базовых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -231,7 +216,6 @@ mixin services-list(props = {})
             },
             {
               counter: 3,
-              counterColor: 'burgundy',
               name: 'Мониторинговых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -250,19 +234,16 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })
+        })(class="service-card_color_burgundy")
 
     .services-list__column
       .services-list__item(data-column="2")
         +service-card({
-          size: 'm',
-          imgObjectFit: 'contain',
           imgSrc: 'assets/img/truck.svg',
           name: 'Карьеры',
           productsGroups: [
             {
               counter: 3,
-              counterColor: 'salmon',
               name: 'Базовых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -282,7 +263,6 @@ mixin services-list(props = {})
             },
             {
               counter: 3,
-              counterColor: 'salmon',
               name: 'Мониторинговых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -301,18 +281,16 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })(class="service-card_size_m")
+        })(class="service-card_size_m service-card_color_salmon")
 
       .services-list__item(data-column="2")
         +service-card({
-          size: 'xl',
           imgObjectFit: 'cover',
           imgSrc: 'assets/img/builders.svg',
           name: 'Строй-контроль',
           productsGroups: [
             {
               counter: 3,
-              counterColor: 'blue',
               name: 'Базовых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -332,7 +310,6 @@ mixin services-list(props = {})
             },
             {
               counter: 3,
-              counterColor: 'blue',
               name: 'Мониторинговых продуктов',
               productslistAtrrs: {class: 'visually-hidden'},
               products: [
@@ -351,4 +328,4 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })(class="service-card_size_xl")
+        })(class="service-card_size_xl service-card_color_blue")

@@ -1,13 +1,28 @@
 .burger-button {
 	display: none;
-	font-size: 30px;
 	color: $gray-800;
+	font-size: 30px;
+	line-height: 1;
 	cursor: pointer;
 	z-index: 2;
+
+	&::after {
+		content: '☰';
+		display: block;
+		text-align: center;
+	}
 
 	&:hover,
 	&:focus {
 		color: $primary;
+	}
+
+	&_opened {
+		font-size: 24px;
+
+		&::after {
+			content: '✕';
+		}
 	}
 }
 

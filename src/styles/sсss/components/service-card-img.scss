@@ -24,28 +24,4 @@
 			object-position: center center;
 		}
 	}
-
-	&_size_m {
-		padding-top: 66%;
-
-		&.service-card-img_cover {
-			padding-top: calc(66% + 15px);
-		}
-	}
-
-	&_size_l {
-		padding-top: calc(100% - 15px);
-
-		&.service-card-img_cover {
-			padding-top: calc(100%);
-		}
-	}
-
-	&_size_xl {
-		padding-top: 124%;
-
-		&.service-card-img_cover {
-			padding-top: calc(124% + 15px);
-		}
-	}
 }

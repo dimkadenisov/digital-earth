@@ -19,3 +19,10 @@
 		box-shadow: 0 4px 16px 0 rgba($black, 0.08);
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.header {
+		background-color: $white;
+		box-shadow: 0 4px 16px 0 rgba($black, 0.08);
+	}
+}

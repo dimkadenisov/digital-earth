@@ -8,8 +8,12 @@
 
 # production
 /build
+
 # /public
 public.zip
+
+# /dist
+dist.zip
 
 # misc
 .DS_Store

@@ -57,3 +57,41 @@ mixin sidebar(props = {})
             },
           ]
         })
+
+      +collapse({name: 'Лес контроль'})
+        +products-group({
+          name: 'Базовые продукты',
+          prdouctsGroupNameAttrs: {class: 'products-group-name_size_l'},
+          products: [
+            {
+              iconId: 'tree',
+              text: 'Лесопокрытые площадки',
+            },
+            {
+              iconId: 'tree',
+              text: 'Ситауционные карты местности',
+            },
+            {
+              iconId: 'tree',
+              text: 'Оценка параметров лесного фонда',
+            },
+          ]
+        })
+        +products-group({
+          name: 'Мониторинговые продукты',
+          prdouctsGroupNameAttrs: {class: 'products-group-name_size_l'},
+          products: [
+            {
+              iconId: 'tree',
+              text: 'Информация о естественных изменениях в лесном фонде',
+            },
+            {
+              iconId: 'tree',
+              text: 'Информация о хозяственной деятельности в лесном фонде',
+            },
+            {
+              iconId: 'tree',
+              text: 'Информация о незаконной деятельности в лесном фонде',
+            },
+          ]
+        })

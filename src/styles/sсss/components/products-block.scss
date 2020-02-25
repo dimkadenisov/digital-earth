@@ -1,9 +1,18 @@
 .products-block {
 	display: flex;
 	justify-content: space-between;
-	max-width: 100%;
+	width: 100%;
+	overflow: hidden;
+
+	.products-group {
+		flex-basis: 50%;
+	}
 
 	&_column {
 		flex-direction: column;
+
+		.products-group {
+			flex-basis: auto;
+		}
 	}
 }

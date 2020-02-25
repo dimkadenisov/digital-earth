@@ -18,20 +18,23 @@ function closest(el, selector) {
 document.addEventListener('click', event => {
 	const card = closest(event.target, '.service-card');
 
-	if (card) {
-		if (window.NodeList && !NodeList.prototype.forEach) {
-			NodeList.prototype.forEach = Array.prototype.forEach;
-		}
+	if (card && !closest(event.target, 'a') && !closest(event.target, 'button')) {
 		card.classList.toggle('service-card_opened');
 		card
 			.querySelector('.products-block')
 			.classList.toggle('products-block_column');
-		card.querySelectorAll('.products-list').forEach(list => {
-			list.classList.toggle('visually-hidden');
-		});
-		card.querySelectorAll('.products-group').forEach(group => {
-			group.classList.toggle('products-group_opened');
-		});
+		Array.prototype.forEach.call(
+			card.querySelectorAll('.products-list'),
+			list => {
+				list.classList.toggle('visually-hidden');
+			},
+		);
+		Array.prototype.forEach.call(
+			card.querySelectorAll('.products-group'),
+			group => {
+				group.classList.toggle('products-group_opened');
+			},
+		);
 		card.querySelector('.buttons-group').classList.toggle('visually-hidden');
 	}
 });

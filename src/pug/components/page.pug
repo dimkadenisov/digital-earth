@@ -7,16 +7,15 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
 
-  link(href="styles/main.css" rel="stylesheet" type="text/css")
-  block link
+    link(href="styles/main.css" rel="stylesheet" type="text/css")
+    block link
 
-  title
-    block title
+    title
+      block title
 
   body
     object(type="image/svg+xml" style="width: 0; height: 0; display: none;")
       include ../../assets/icons/sprite/symbol/svg/sprite.symbol.svg
-    +header
     block content
     //- +footer
 

@@ -1,19 +1,23 @@
 .collapse {
-	margin-bottom: 35px;
+	// margin-bottom: 35px;
 
 	&__inner {
 		padding-right: 25px;
 		padding-left: 25px;
-		max-height: 0;
+		max-height: 0px;
 		overflow: hidden;
-		transition: padding-top, max-height 0.25s ease;
+		transition: max-height 0.25s ease, padding-top 0.25s ease;
+	}
+
+	.products-group {
+		padding-top: 20px;
+	}
+
+	.products-list {
+		margin-bottom: 0;
 	}
 
 	&_opened {
-		.collapse-heading {
-			margin-bottom: 20px;
-		}
-
 		.collapse-heading__triangle {
 			transform: rotate(180deg);
 		}

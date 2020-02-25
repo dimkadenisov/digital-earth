@@ -5,20 +5,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <title>Лесопокрытые площади</title>
 </head>
-<link href="styles/main.css" rel="stylesheet" type="text/css" />
-<title>Лесопокрытые площади</title>
 
 <body><object type="image/svg+xml" style="width: 0; height: 0; display: none;">
         <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <symbol fill="currentColor" viewBox="-10 -10 38.25 38" id="tree" xmlns="http://www.w3.org/2000/svg">
+            <symbol fill="currentColor" viewBox="0 0 18.25 18" id="tree" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M13.887 14.5a4.113 4.113 0 01-1.842-.436v-3.771l1.885-.991-.491-.934-1.394.733V7.56h-1.054v3.455l-1.395-.733-.49.933 1.885.991v1.858a4.116 4.116 0 01-4.43-.481 5.238 5.238 0 002.816-5.296L8.87 4.136a4.099 4.099 0 012.648-.966c1.044 0 2.039.392 2.802 1.103a4.09 4.09 0 011.26 2.365A4.122 4.122 0 0118 10.387a4.118 4.118 0 01-4.113 4.113zm-9.18-1.432V18H3.653v-4.932l.014.001a4.156 4.156 0 001.04-.001v-2.544l1.886-.991-.491-.934-1.395.733V6.653l1.886-.991-.491-.933-1.395.733V3.921H3.653v3.476l-1.394-.733-.491.933 1.885.992v4.479A4.182 4.182 0 01.031 8.414L.68 3.099A3.53 3.53 0 014.18 0a3.529 3.529 0 013.5 3.099l.65 5.315a4.183 4.183 0 01-3.623 4.654zm6.548.851c.089-.053.177-.11.263-.17.168.119.344.224.527.315V18H10.99v-3.936l.003-.001c.089-.045.176-.093.262-.144z" />
             </symbol>
         </svg></object>
-    <div class="header">
+    <div class="header header_scrolled" data-disabled="data-disabled">
         <div class="container">
             <div class="header__inner"><a class="logo" href="#"><img class="logo__img" src="assets/img/logo.svg" alt="Министерство цифрового развития" /></a>
-                <div class="burger-button">☰</div>
+                <div class="burger-button"></div>
+                <div class="overlay d_none"></div>
                 <div class="burger-menu">
                     <ul class="menu-list">
                         <li class="menu-list__item"><a class="link" href="#"><span class="link__text">Новости</span></a></li>
@@ -85,17 +86,52 @@
                             </div>
                         </div>
                     </div>
+                    <div class="collapse">
+                        <div class="collapse-heading">Лес контроль<span class="collapse-heading__triangle">▲</span></div>
+                        <div class="collapse__inner">
+                            <div class="products-group">
+                                <div class="products-group-name products-group-name_size_l"><span class="products-group-name__text">Базовые продукты</span></div>
+                                <ul class="products-list">
+                                    <li class="products-list__item"><a class="product" href="#"><svg class="product__icon">
+                                                <use xlink:href="#tree"></use>
+                                            </svg><span class="product__text">Лесопокрытые площадки</span></a></li>
+                                    <li class="products-list__item"><a class="product" href="#"><svg class="product__icon">
+                                                <use xlink:href="#tree"></use>
+                                            </svg><span class="product__text">Ситауционные карты местности</span></a></li>
+                                    <li class="products-list__item"><a class="product" href="#"><svg class="product__icon">
+                                                <use xlink:href="#tree"></use>
+                                            </svg><span class="product__text">Оценка параметров лесного фонда</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="products-group">
+                                <div class="products-group-name products-group-name_size_l"><span class="products-group-name__text">Мониторинговые продукты</span></div>
+                                <ul class="products-list">
+                                    <li class="products-list__item"><a class="product" href="#"><svg class="product__icon">
+                                                <use xlink:href="#tree"></use>
+                                            </svg><span class="product__text">Информация о естественных изменениях в лесном фонде</span></a></li>
+                                    <li class="products-list__item"><a class="product" href="#"><svg class="product__icon">
+                                                <use xlink:href="#tree"></use>
+                                            </svg><span class="product__text">Информация о хозяственной деятельности в лесном фонде</span></a></li>
+                                    <li class="products-list__item"><a class="product" href="#"><svg class="product__icon">
+                                                <use xlink:href="#tree"></use>
+                                            </svg><span class="product__text">Информация о незаконной деятельности в лесном фонде</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="content">
                 <div class="content__inner">
                     <h1 class="h2">Лесопокрытые площади</h1>
                     <div class="default-styles">
-                        <figure>
-                            <div><img src="assets/img/card-1.jpg" alt="изображение" /></div>
-                            <div><img src="assets/img/card-2.jpg" alt="изображение" /></div>
-                        </figure>
-                        <p>Наиболее пострадали здания вдоль улиц Ленина, Юбилейной, Гидролизной, Карбышева и смежных им. Тем не менее, территория ОАО «Восточно-Сибирский комбинат биотехнологий», занимающегося синтезом химических веществ, сравнительно не пострадала, также как и станция Транссибирской железной дороги, носящая имя города и расположенная в более чем 4 км от русла реки. Впрочем, наводнение миновало почти все полотно основной ветки железной дороги и железнодорожный мост, расположенные к северу от центральной части города. В центре оказались затоплены первые этажи многоэтажных зданий (31 шт) по улице Ленина.</p>
+                        <h1>Текст заголовка h1</h1>
+                        <h2>Текст заголовка h2</h2>
+                        <h3>Текст заголовка h3</h3>
+                        <h4>Текст заголовка h4</h4>
+                        <figure><img src="assets/img/card-1.jpg" alt="изображение" /><img src="assets/img/card-2.jpg" alt="изображение" /></figure>
+                        <p>Наиболее пострадали здания вдоль улиц Ленина, Юбилейной, Гидролизной, Карбышева и смежных им. Тем не менее, территория ОАО «Восточно-Сибирский комбинат биотехнологий», занимающегося синтезом химических веществ, сравнительно не пострадала, также как и станция Транссибирской железной дороги, носящая имя города и расположенная в более чем 4 км от русла реки. Впрочем, наводнение миновало почти все полотно основной ветки железной дороги и железнодорожный мост, расположенные к северу от центральной части города. В центре оказались затоплены первые этажи многоэтажных зданий (31 шт) по улице
+                            <b>Ленина.</b></p>
                         <p>Наиболее пострадали здания вдоль улиц Ленина, Юбилейной, Гидролизной, Карбышева и смежных им. Тем не менее, территория ОАО «Восточно-Сибирский комбинат биотехнологий», занимающегося синтезом химических веществ, сравнительно не пострадала, также как и станция Транссибирской железной дороги, носящая имя города и расположенная в более чем 4 км от русла реки. Впрочем, наводнение миновало почти все полотно основной ветки железной дороги и железнодорожный мост, расположенные к северу от центральной части города. В центре оказались затоплены первые этажи многоэтажных зданий (31 шт) по улице Ленина.</p>
                         <figure class="image-left"><img src="assets/img/card-1.jpg" alt="изображение" /></figure>
                         <p>Наиболее пострадали здания вдоль улиц Ленина, Юбилейной, Гидролизной, Карбышева и смежных им. Тем не менее, территория ОАО «Восточно-Сибирский комбинат биотехнологий», занимающегося синтезом химических веществ, сравнительно не пострадала, также как и станция Транссибирской железной дороги, носящая имя города и расположенная в более чем 4 км от русла реки. Впрочем, наводнение миновало почти все полотно основной ветки железной дороги и железнодорожный мост, расположенные к северу от центральной части города. В центре оказались затоплены первые этажи многоэтажных зданий (31 шт) по улице Ленина.</p>

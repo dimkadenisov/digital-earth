@@ -8,34 +8,6 @@
 	font-weight: 700;
 	line-height: 40px;
 	text-align: center;
-
-	&_color_green {
-		background-color: $green-300;
-	}
-
-	&_color_yellow {
-		background-color: $yellow-300;
-	}
-
-	&_color_mint {
-		background-color: $mint-300;
-	}
-
-	&_color_crimson {
-		background-color: $crimson-300;
-	}
-
-	&_color_burgundy {
-		background-color: $burgundy-300;
-	}
-
-	&_color_salmon {
-		background-color: $salmon-300;
-	}
-
-	&_color_blue {
-		background-color: $blue-300;
-	}
 }
 
 @media screen and (max-width: 409px) {
