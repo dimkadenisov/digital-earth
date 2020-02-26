@@ -21,7 +21,7 @@ mixin service-card(props = {})
         each props in productsGroups
           +products-group(props)
       +buttons-group(class="visually-hidden")
-        +button({tag: 'a', size: 's', color: 'primary'})(href="#")
+        +button({tag: 'a', size: 's', color: 'violet'})(href="#")
           |Открыть карту
-        +button({tag: 'a', size: 's', color: 'gray'})(href="#")
+        +button({tag: 'a', size: 's'})(href="#")
           |Открыть дашборд

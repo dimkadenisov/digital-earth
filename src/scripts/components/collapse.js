@@ -7,10 +7,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 Array.prototype.forEach.call(collapseHeadings, heading => {
 	heading.addEventListener('click', function() {
 		const collapse = closest(this, '.collapse');
-		const collapseInner = collapse.querySelector('.collapse__inner');
-
 		collapse.classList.toggle('collapse_opened');
-
 		const isCollapseOpened = collapse.classList.contains('collapse_opened');
 
 		const height = isCollapseOpened

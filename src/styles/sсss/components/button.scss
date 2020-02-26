@@ -7,13 +7,20 @@
 	padding-right: 38px;
 	padding-bottom: 12px;
 	padding-left: 38px;
+	background-color: $gray-200;
 	border: none;
 	border-radius: 24px;
+	color: $gray-600;
 	font-size: 18px;
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
 	transition: background-color 0.2 ease;
+
+	&:hover,
+	&:focus {
+		background-color: darken($gray-200, 10%);
+	}
 
 	&_size_s {
 		min-height: 34px;
@@ -32,83 +39,13 @@
 		}
 	}
 
-	&_color_green {
-		background-color: rgba($green-300, 0.2);
-		color: $green-300;
-
-		&:hover,
-		&:focus {
-			background-color: rgba($green-300, 0.3);
-		}
-	}
-
-	&_color_yellow {
-		background-color: rgba($yellow-300, 0.2);
-		color: $yellow-300;
-
-		&:hover,
-		&:focus {
-			background-color: rgba($yellow-300, 0.3);
-		}
-	}
-
-	&_color_mint {
-		background-color: rgba($mint-300, 0.2);
-		color: $mint-300;
-
-		&:hover,
-		&:focus {
-			background-color: rgba($mint-300, 0.3);
-		}
-	}
-
-	&_color_crimson {
-		background-color: rgba($crimson-300, 0.2);
-		color: $crimson-300;
-
-		&:hover,
-		&:focus {
-			background-color: rgba($crimson-300, 0.3);
-		}
-	}
-
-	&_color_burgundy {
-		background-color: rgba($burgundy-300, 0.2);
-		color: $burgundy-300;
-
-		&:hover,
-		&:focus {
-			background-color: rgba($burgundy-300, 0.3);
-		}
-	}
-
-	&_color_salmon {
-		background-color: rgba($salmon-300, 0.2);
-		color: $salmon-300;
-
-		&:hover,
-		&:focus {
-			background-color: rgba($salmon-300, 0.3);
-		}
-	}
-
-	&_color_blue {
-		background-color: $blue-300;
+	&_color_violet {
+		background-color: $violet-300;
 		color: $white;
 
 		&:hover,
 		&:focus {
-			background-color: darken($blue-300, 10%);
-		}
-	}
-
-	&_color_gray {
-		background-color: rgba($gray-600, 0.2);
-		color: $gray-600;
-
-		&:hover,
-		&:focus {
-			background-color: rgba($gray-600, 0.3);
+			background-color: darken($violet-300, 10%);
 		}
 	}
 }

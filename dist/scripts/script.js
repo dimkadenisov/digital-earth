@@ -28,7 +28,6 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 Array.prototype.forEach.call(collapseHeadings, function (heading) {
   heading.addEventListener('click', function () {
     var collapse = closest(this, '.collapse');
-    var collapseInner = collapse.querySelector('.collapse__inner');
     collapse.classList.toggle('collapse_opened');
     var isCollapseOpened = collapse.classList.contains('collapse_opened');
     var height = isCollapseOpened ? Array.prototype.reduce.call(collapse.querySelectorAll('.collapse__inner > *'), function (acc, node) {

@@ -1,21 +1,7 @@
 .products-counter {
 	display: inline-block;
-	min-width: 40px;
-	height: 40px;
-	border-radius: 20px;
-	color: $white;
-	font-size: 24px;
+	color: $violet-300;
+	font-size: 34px;
 	font-weight: 700;
-	line-height: 40px;
-	text-align: center;
-}
-
-@media screen and (max-width: 409px) {
-	.products-counter {
-		min-width: 30px;
-		height: 30px;
-		border-radius: 15px;
-		font-size: 18px;
-		line-height: 30px;
-	}
+	line-height: 1;
 }

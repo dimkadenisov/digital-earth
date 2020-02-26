@@ -30,6 +30,10 @@
 		margin-bottom: 20px;
 	}
 
+	.products-block {
+		flex-shrink: 0;
+	}
+
 	.service-card-img {
 		margin-bottom: 15px;
 
@@ -56,9 +60,9 @@
 			padding-top: 66%;
 		}
 
-		.service-card-img_cover {
-			padding-top: calc(66% + 15px);
-		}
+		// .service-card-img_cover {
+		// 	flex-basis: calc(66% + 15px);
+		// }
 	}
 
 	&_size_l {
@@ -68,9 +72,9 @@
 			padding-top: calc(100% - 15px);
 		}
 
-		.service-card-img_cover {
-			padding-top: calc(100%);
-		}
+		// .service-card-img_cover {
+		// 	flex-basis: calc(100%);
+		// }
 	}
 
 	&_size_xl {
@@ -80,9 +84,9 @@
 			padding-top: 124%;
 		}
 
-		.service-card-img_cover {
-			padding-top: calc(124% + 15px);
-		}
+		// .service-card-img_cover {
+		// 	padding-top: calc(124% + 15px);
+		// }
 	}
 
 	&_opened {
@@ -92,48 +96,6 @@
 			position: relative;
 			height: auto;
 			max-height: 5000px;
-		}
-	}
-
-	&_color_green {
-		.products-counter {
-			background-color: $green-300;
-		}
-	}
-
-	&_color_yellow {
-		.products-counter {
-			background-color: $yellow-300;
-		}
-	}
-
-	&_color_mint {
-		.products-counter {
-			background-color: $mint-300;
-		}
-	}
-
-	&_color_crimson {
-		.products-counter {
-			background-color: $crimson-300;
-		}
-	}
-
-	&_color_burgundy {
-		.products-counter {
-			background-color: $burgundy-300;
-		}
-	}
-
-	&_color_salmon {
-		.products-counter {
-			background-color: $salmon-300;
-		}
-	}
-
-	&_color_blue {
-		.products-counter {
-			background-color: $blue-300;
 		}
 	}
 }

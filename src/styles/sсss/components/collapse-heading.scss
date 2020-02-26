@@ -1,20 +1,36 @@
 .collapse-heading {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	margin-bottom: 0px;
 	padding: 17px 25px;
-	border-bottom: 1px solid $gray-200;
+	// border-bottom: 1px solid $gray-200;
 	color: $gray-800;
 	font-size: 24px;
 	cursor: pointer;
 	transition: marginBottom 1s linear;
 
-	&__triangle {
-		display: inline-block;
-		margin-top: 3px;
-		margin-left: 10px;
-		font-size: 14px;
-		line-height: 10px;
-		transition: transform 0.3s;
+	// &__triangle {
+	// 	display: inline-block;
+	// 	margin-top: 3px;
+	// 	margin-left: 10px;
+	// 	font-size: 14px;
+	// 	line-height: 10px;
+	// 	transition: transform 0.3s;
+	// }
+
+	&__icon-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 62px;
+		height: 62px;
+		border-radius: 50%;
+		border: 2px solid $gray-200;
+	}
+
+	&__icon {
+		width: 39px;
+		height: 29px;
 	}
 }

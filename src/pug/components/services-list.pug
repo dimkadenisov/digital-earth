@@ -6,7 +6,6 @@ mixin services-list(props = {})
     .services-list__column
       .services-list__item(data-column="0")
         +service-card({
-          imgObjectFit: 'cover',
           imgSrc: 'assets/img/forest.svg',
           name: 'Лес-контроль',
           productsGroups: [
@@ -49,11 +48,11 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })(class="service-card_size_l service-card_color_green")
+        })(class="service-card_size_l")
 
       .services-list__item(data-column="0")
         +service-card({
-          imgSrc: 'assets/img/mountains.svg',
+          imgSrc: 'assets/img/plants.svg',
           name: 'Сельхоз-мониторинг',
           productsGroups: [
             {
@@ -95,12 +94,12 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })(class="service-card_size_l service-card_color_yellow")
+        })(class="service-card_size_l")
 
     .services-list__column
       .services-list__item(data-column="1")
         +service-card({
-          imgSrc: 'assets/img/earth.svg',
+          imgSrc: 'assets/img/factory.svg',
           name: 'Эко-мониторинг',
           productsGroups: [
             {
@@ -142,11 +141,11 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })(class="service-card_color_mint")
+        })
 
       .services-list__item(data-column="1")
         +service-card({
-          imgSrc: 'assets/img/house-on-fire.svg',
+          imgSrc: 'assets/img/tornado.svg',
           name: 'Чрезвычайные ситуации',
           productsGroups: [
             {
@@ -188,11 +187,11 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })(class="service-card_color_crimson")
+        })
 
       .services-list__item(data-column="1")
         +service-card({
-          imgSrc: 'assets/img/dirt.svg',
+          imgSrc: 'assets/img/dunes.svg',
           name: 'Нарушенные земли',
           productsGroups: [
             {
@@ -234,12 +233,12 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })(class="service-card_color_burgundy")
+        })
 
     .services-list__column
       .services-list__item(data-column="2")
         +service-card({
-          imgSrc: 'assets/img/truck.svg',
+          imgSrc: 'assets/img/ecology.svg',
           name: 'Карьеры',
           productsGroups: [
             {
@@ -281,12 +280,11 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })(class="service-card_size_m service-card_color_salmon")
+        })(class="service-card_size_m")
 
       .services-list__item(data-column="2")
         +service-card({
-          imgObjectFit: 'cover',
-          imgSrc: 'assets/img/builders.svg',
+          imgSrc: 'assets/img/city.svg',
           name: 'Строй-контроль',
           productsGroups: [
             {
@@ -328,4 +326,4 @@ mixin services-list(props = {})
               ]
             },
           ],
-        })(class="service-card_size_xl service-card_color_blue")
+        })(class="service-card_size_xl")

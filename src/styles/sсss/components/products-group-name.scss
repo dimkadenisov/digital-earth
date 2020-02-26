@@ -9,6 +9,23 @@
 
 	&__text {
 		display: inline-block;
+		position: relative;
+
+		&:only-child {
+			padding-left: 15px;
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 9px;
+				left: 0;
+				width: 6px;
+				height: 6px;
+				background-color: $gray-800;
+				border-radius: 50%;
+			}
+		}
 	}
 
 	&_size_l {

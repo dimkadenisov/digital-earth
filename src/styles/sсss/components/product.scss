@@ -23,7 +23,8 @@
 	}
 
 	&_active {
-		color: $primary;
+		color: $green-300;
+		font-weight: 700;
 		opacity: 1;
 	}
 }

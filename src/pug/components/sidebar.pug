@@ -4,7 +4,7 @@ mixin sidebar(props = {})
 
   .sidebar&attributes(attributes)
     .sidebar__inner
-      +collapse({name: 'Лес контроль'})(class="collapse_opened")
+      +collapse({name: 'Лес контроль', iconId: 'trees'})(class="collapse_opened")
         +products-group({
           name: 'Базовые продукты',
           prdouctsGroupNameAttrs: {class: 'products-group-name_size_l'},
@@ -42,7 +42,7 @@ mixin sidebar(props = {})
           ]
         })
 
-      +collapse({name: 'Эко-мониторинг'})
+      +collapse({name: 'Эко-мониторинг' , iconId: 'plant'})
         +products-group({
           name: 'Базовые продукты',
           prdouctsGroupNameAttrs: {class: 'products-group-name_size_l'},
@@ -58,7 +58,7 @@ mixin sidebar(props = {})
           ]
         })
 
-      +collapse({name: 'Лес контроль'})
+      +collapse({name: 'Лес контроль', iconId: 'trees'})
         +products-group({
           name: 'Базовые продукты',
           prdouctsGroupNameAttrs: {class: 'products-group-name_size_l'},
