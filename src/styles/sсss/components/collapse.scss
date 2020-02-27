@@ -1,22 +1,23 @@
 .collapse {
 	&__inner {
-		padding-right: 25px;
-		padding-left: 25px;
+		padding-right: 30px;
+		padding-left: 30px;
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.25s ease, padding-top 0.25s ease;
 	}
 
 	.products-group {
-		padding-top: 20px;
+		padding-top: 8px;
 	}
 
 	.products-list {
-		margin-bottom: 0;
+		margin-left: 28px;
 	}
 
 	&_opened {
-		padding-bottom: 30px;
+		margin-bottom: 23px;
+		padding-bottom: 12px;
 		border-bottom: 1px solid $gray-200;
 
 		.collapse-heading__triangle {

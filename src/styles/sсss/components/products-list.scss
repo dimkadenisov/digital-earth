@@ -1,9 +1,9 @@
 .products-list {
-	margin-bottom: 15px;
+	margin-bottom: 18px;
 
 	&__item {
 		&:nth-last-child(n + 2) {
-			margin-bottom: 20px;
+			margin-bottom: 18px;
 		}
 	}
 }
