@@ -1,5 +1,12 @@
+.burger-menu {
+	display: flex;
+	align-items: center;
+}
+
 @media screen and (max-width: 991px) {
 	.burger-menu {
+		align-items: flex-start;
+		flex-direction: column;
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -10,6 +17,15 @@
 		transform: translateX(100%);
 		transform-origin: top right;
 		overflow-y: auto;
+
+		.icon-buttons-list {
+			order: -1;
+			margin-bottom: 15px;
+			margin-left: 0;
+			padding-bottom: 15px;
+			padding-left: 25px;
+			border-bottom: 1px solid $gray-200;
+		}
 
 		.menu-list {
 			flex-direction: column;
@@ -27,9 +43,9 @@
 			font-size: 18px;
 		}
 
-		& > *:last-child {
-			margin-bottom: 35px;
-		}
+		// & > *:last-child {
+		// 	margin-bottom: 35px;
+		// }
 
 		&_opened {
 			transform: translateX(0);

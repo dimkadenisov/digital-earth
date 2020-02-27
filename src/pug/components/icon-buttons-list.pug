@@ -1,0 +1,10 @@
+mixin icon-buttons-list(props = {})
+  include icon-button
+
+  ul.icon-buttons-list&attributes(attributes)
+    li.icon-buttons-list__item
+      +icon-button({tag: 'a', iconId: 'mail'})(href="#")
+    li.icon-buttons-list__item
+      +icon-button({tag: 'a', iconId: 'grid'})(href="#")
+    li.icon-buttons-list__item
+      +icon-button({tag: 'a', iconId: 'user'})(class="icon-button_primary" href="#")

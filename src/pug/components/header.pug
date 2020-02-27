@@ -4,6 +4,7 @@ mixin header(props = {})
   include menu-list
   include burger-button
   include burger-menu
+  include icon-buttons-list
 
   .header&attributes(attributes)
     .container
@@ -12,3 +13,4 @@ mixin header(props = {})
         +burger-button
         +burger-menu
           +menu-list({items: ['Новости', 'Контакты', 'Войти']})
+          +icon-buttons-list
