@@ -1,0 +1,21 @@
+.button-counter {
+	position: absolute;
+	top: 5px;
+	left: 30px;
+	min-width: 18px;
+	height: 18px;
+	padding-right: 3px;
+	padding-left: 3px;
+	background-color: $primary;
+	border-radius: 9px;
+	color: $white;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 18px;
+	text-align: center;
+	transform: translate(-50%, -50%);
+
+	&__icon {
+		width: 100%;
+	}
+}

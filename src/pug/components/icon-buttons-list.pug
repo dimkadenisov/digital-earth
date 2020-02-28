@@ -3,7 +3,7 @@ mixin icon-buttons-list(props = {})
 
   ul.icon-buttons-list&attributes(attributes)
     li.icon-buttons-list__item
-      +icon-button({tag: 'a', iconId: 'mail'})(href="#")
+      +icon-button({tag: 'a', iconId: 'mail', counter: '5'})(href="#")
     li.icon-buttons-list__item
       +icon-button({tag: 'a', iconId: 'grid'})(href="#")
     li.icon-buttons-list__item
