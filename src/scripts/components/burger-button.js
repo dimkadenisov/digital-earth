@@ -1,4 +1,5 @@
-document.querySelector('.burger-button').addEventListener('click', function() {
+const burgerButton = document.querySelector('.burger-button');
+burgerButton.addEventListener('click', function() {
 	this.classList.toggle('burger-button_opened');
 	document.body.classList.toggle('overflow_hidden');
 	this.parentNode
@@ -22,3 +23,19 @@ const toggleBurgerMenuTransition = () => {
 toggleBurgerMenuTransition();
 
 window.addEventListener('resize', toggleBurgerMenuTransition);
+
+window.addEventListener('orientationchange', () => {
+	if (
+		window.matchMedia('(min-width: 992px)').matches &&
+		burgerButton.classList.contains('burger-button_opened')
+	) {
+		burgerButton.classList.remove('burger-button_opened');
+		document.body.classList.remove('overflow_hidden');
+		document
+			.querySelector('.burger-menu_opened')
+			.classList.remove('burger-menu_opened');
+		burgerButton.parentNode
+			.querySelector('.overlay')
+			.classList.remove('d_none');
+	}
+});

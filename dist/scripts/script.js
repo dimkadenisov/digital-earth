@@ -1,6 +1,7 @@
 "use strict";
 
-document.querySelector('.burger-button').addEventListener('click', function () {
+var burgerButton = document.querySelector('.burger-button');
+burgerButton.addEventListener('click', function () {
   this.classList.toggle('burger-button_opened');
   document.body.classList.toggle('overflow_hidden');
   this.parentNode.querySelector('.burger-menu').classList.toggle('burger-menu_opened');
@@ -17,6 +18,14 @@ var toggleBurgerMenuTransition = function toggleBurgerMenuTransition() {
 
 toggleBurgerMenuTransition();
 window.addEventListener('resize', toggleBurgerMenuTransition);
+window.addEventListener('orientationchange', function () {
+  if (window.matchMedia('(min-width: 992px)').matches && burgerButton.classList.contains('burger-button_opened')) {
+    burgerButton.classList.remove('burger-button_opened');
+    document.body.classList.remove('overflow_hidden');
+    document.querySelector('.burger-menu_opened').classList.remove('burger-menu_opened');
+    burgerButton.parentNode.querySelector('.overlay').classList.remove('d_none');
+  }
+});
 "use strict";
 
 var collapseHeadings = document.querySelectorAll('.collapse-heading');
@@ -39,7 +48,16 @@ Array.prototype.forEach.call(collapseHeadings, function (heading) {
 "use strict";
 
 document.addEventListener('scroll', function () {
-  return window.pageYOffset > 1 ? document.querySelector('.header:not([data-disabled])').classList.add('header_scrolled') : document.querySelector('.header:not([data-disabled])').classList.remove('header_scrolled');
+  if (document.querySelector('.header:not([data-disabled])')) {
+    window.pageYOffset > 1 ? document.querySelector('.header:not([data-disabled])').classList.add('header_scrolled') : document.querySelector('.header:not([data-disabled])').classList.remove('header_scrolled');
+  }
+});
+"use strict";
+
+window.matchMedia('(max-width: 767px)') && document.querySelector('.ready-product') && (document.querySelector('.ready-product').innerText = 'Готовые продукты');
+var mediaQuery = window.matchMedia('(max-width: 767px)');
+document.querySelector('.ready-product') && mediaQuery.addListener(function (e) {
+  document.querySelector('.ready-product').innerText = e.matches ? 'Готовые продукты' : 'Посмотреть готовые продукты';
 });
 "use strict";
 

@@ -32,3 +32,12 @@
 		}
 	}
 }
+
+@media screen and (max-width: 575px) {
+	.breadcrumbs {
+		&__link {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+	}
+}

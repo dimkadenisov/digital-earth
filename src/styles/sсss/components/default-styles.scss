@@ -26,29 +26,28 @@
 	}
 
 	p {
-		max-width: 690px;
 		margin-top: 0;
 		margin-bottom: 15px;
 		font-size: 16px;
 	}
 
-	figure {
-		display: flex;
-		margin: 0 0 24px 0;
+	// figure {
+	// 	display: flex;
+	// 	margin: 0 0 24px 0;
 
-		img {
-			max-width: 100%;
+	// 	img {
+	// 		max-width: 100%;
 
-			&:nth-last-child(n + 2) {
-				margin-right: 24px;
-			}
-		}
+	// 		&:nth-last-child(n + 2) {
+	// 			margin-right: 24px;
+	// 		}
+	// 	}
 
-		figcaption {
-			margin-top: 10px;
-			font-size: 12px;
-		}
-	}
+	// 	figcaption {
+	// 		margin-top: 10px;
+	// 		font-size: 12px;
+	// 	}
+	// }
 
 	ol {
 		margin: 0 0 40px 0;
@@ -109,6 +108,33 @@
 	}
 }
 
+.images-block {
+	display: flex;
+
+	figure {
+		flex-shrink: 1;
+		margin: 0 0 20px 0;
+
+		img {
+			width: 100%;
+		}
+
+		&:nth-last-child(n + 2) {
+			margin-right: 24px;
+		}
+	}
+
+	figcaption {
+		margin-top: 10px;
+	}
+
+	&_full-width {
+		figure {
+			flex-grow: 1;
+		}
+	}
+}
+
 .responsive-table {
 	max-width: 100%;
 	margin: 0 0 50px 0;
@@ -159,6 +185,10 @@
 			img {
 				max-width: 100%;
 			}
+
+			figcaption {
+				margin-top: 10px;
+			}
 		}
 
 		.image-left {
@@ -170,34 +200,88 @@
 			img {
 				max-width: 100%;
 			}
+
+			figcaption {
+				margin-top: 10px;
+			}
 		}
 	}
 }
 
 @media screen and (max-width: 767px) {
 	.default-styles {
-		figure {
-			flex-wrap: wrap;
-		}
+		// figure {
+		// 	flex-wrap: wrap;
+
+		// 	img {
+		// 		&:nth-last-child(n + 2) {
+		// 			margin-right: 0;
+		// 			margin-bottom: 24px;
+		// 		}
+		// 	}
+		// }
 
 		.image-right {
 			margin: 0 0 24px 0;
+
+			figcaption {
+				margin-top: 10px;
+			}
 		}
 
 		.image-left {
 			margin: 0 0 24px 0;
+
+			figcaption {
+				margin-top: 10px;
+			}
+		}
+
+		.images-block {
+			// display: flex;
+			// margin-bottom: 20px;
+			flex-wrap: wrap;
+
+			figure {
+				// flex-shrink: 1;
+				// margin: 0;
+
+				// img {
+				// 	width: 100%;
+				// }
+
+				&:nth-last-child(n + 2) {
+					margin-right: 0;
+				}
+			}
+
+			// figcaption {
+			// 	margin-top: 10px;
+			// }
 		}
 	}
 }
 
 @media screen and (max-width: 575px) {
 	.default-styles {
-		figure {
-			img {
-				&:nth-last-child(n + 2) {
-					margin-right: 0;
-				}
-			}
+		h2 {
+			font-size: 22px;
 		}
+
+		h3 {
+			font-size: 20px;
+		}
+
+		h4 {
+			font-size: 18px;
+		}
+
+		// figure {
+		// 	img {
+		// 		&:nth-last-child(n + 2) {
+		// 			margin-right: 0;
+		// 		}
+		// 	}
+		// }
 	}
 }
