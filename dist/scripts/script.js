@@ -40,6 +40,7 @@ Array.prototype.forEach.call(collapseHeadings, function (heading) {
     collapse.classList.toggle('collapse_opened');
     var isCollapseOpened = collapse.classList.contains('collapse_opened');
     var height = isCollapseOpened ? Array.prototype.reduce.call(collapse.querySelectorAll('.collapse__inner > *'), function (acc, node) {
+      console.log(node.offsetHeight);
       return acc + node.offsetHeight;
     }, 0) : 0;
     collapse.querySelector('.collapse__inner').style.maxHeight = "".concat(height, "px");
@@ -51,6 +52,24 @@ document.addEventListener('scroll', function () {
   if (document.querySelector('.header:not([data-disabled])')) {
     window.pageYOffset > 1 ? document.querySelector('.header:not([data-disabled])').classList.add('header_scrolled') : document.querySelector('.header:not([data-disabled])').classList.remove('header_scrolled');
   }
+});
+"use strict";
+
+Array.prototype.forEach.call(document.querySelectorAll('.language-select'), function (select) {
+  select.addEventListener('click', function (event) {
+    if (closest(event.target, '.language-select__current')) {
+      select.classList.toggle('language-select_opened');
+    }
+
+    if (closest(event.target, '.language-list .language')) {
+      var newLanguage = closest(event.target, '.language-list .language');
+      var appendTarget = newLanguage.parentNode;
+      var oldLanguage = select.querySelector('.language-select__current .language');
+      oldLanguage.parentNode.appendChild(newLanguage);
+      appendTarget.appendChild(oldLanguage);
+      select.classList.toggle('language-select_opened');
+    }
+  });
 });
 "use strict";
 

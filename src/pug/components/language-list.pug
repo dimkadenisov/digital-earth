@@ -1,0 +1,12 @@
+mixin language-list(props = {})
+  include language
+
+  ul.language-list&attributes(attributes)
+    li.language-list__item
+      +language({lang: 'en'})
+    li.language-list__item
+      +language({lang: 'de'})
+    li.language-list__item
+      +language({lang: 'fr'})
+    li.language-list__item
+      +language({lang: 'dme'})

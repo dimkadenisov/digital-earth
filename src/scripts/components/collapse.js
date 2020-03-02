@@ -13,7 +13,10 @@ Array.prototype.forEach.call(collapseHeadings, heading => {
 		const height = isCollapseOpened
 			? Array.prototype.reduce.call(
 					collapse.querySelectorAll('.collapse__inner > *'),
-					(acc, node) => acc + node.offsetHeight,
+					(acc, node) => {
+						console.log(node.offsetHeight);
+						return acc + node.offsetHeight;
+					},
 					0,
 			  )
 			: 0;

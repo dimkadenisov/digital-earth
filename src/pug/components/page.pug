@@ -1,4 +1,5 @@
 include header
+include footer
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -17,7 +18,7 @@ html(lang="ru")
     object(type="image/svg+xml" style="width: 0; height: 0; display: none;")
       include ../../assets/icons/sprite/symbol/svg/sprite.symbol.svg
     block content
-    //- +footer
+    +footer
 
     script(src="scripts/libraries/oldBrowsersDetection.js")
     script(src="scripts/libraries/objectFitPolyfill.min.js")
