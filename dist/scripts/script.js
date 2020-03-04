@@ -55,19 +55,43 @@ document.addEventListener('scroll', function () {
 });
 "use strict";
 
-Array.prototype.forEach.call(document.querySelectorAll('.language-select'), function (select) {
-  select.addEventListener('click', function (event) {
-    if (closest(event.target, '.language-select__current')) {
-      select.classList.toggle('language-select_opened');
-    }
+var handleSelectMouseEnter = function handleSelectMouseEnter(event) {
+  this.classList.add('language-select_opened'); // if (closest(event.target, '.language-select__current')) {
+  // 	select.classList.toggle('language-select_opened');
+  // }
+  // if (closest(event.target, '.language-list .language')) {
+  // 	const newLanguage = closest(event.target, '.language-list .language');
+  // 	const appendTarget = newLanguage.parentNode;
+  // 	const oldLanguage = select.querySelector(
+  // 		'.language-select__current .language',
+  // 	);
+  // 	oldLanguage.parentNode.appendChild(newLanguage);
+  // 	appendTarget.appendChild(oldLanguage);
+  // 	select.classList.toggle('language-select_opened');
+  // }
+};
 
-    if (closest(event.target, '.language-list .language')) {
-      var newLanguage = closest(event.target, '.language-list .language');
-      var appendTarget = newLanguage.parentNode;
+var handleSelectMouseLeave = function handleSelectMouseLeave(event) {
+  this.classList.remove('language-select_opened');
+};
+
+Array.prototype.forEach.call(document.querySelectorAll('.language-select'), function (select) {
+  select.addEventListener('mouseenter', handleSelectMouseEnter);
+  select.addEventListener('mouseleave', handleSelectMouseLeave);
+});
+Array.prototype.forEach.call(document.querySelectorAll('.language'), function (language) {
+  language.addEventListener('click', function (event) {
+    if (closest(language, '.language-list')) {
+      var appendTarget = language.parentNode;
+      var select = closest(language, '.language-select');
       var oldLanguage = select.querySelector('.language-select__current .language');
-      oldLanguage.parentNode.appendChild(newLanguage);
+      oldLanguage.parentNode.appendChild(language);
       appendTarget.appendChild(oldLanguage);
-      select.classList.toggle('language-select_opened');
+      select.classList.remove('language-select_opened');
+      select.removeEventListener('mouseenter', handleSelectMouseEnter);
+      setTimeout(function () {
+        select.addEventListener('mouseenter', handleSelectMouseEnter);
+      }, 200);
     }
   });
 });

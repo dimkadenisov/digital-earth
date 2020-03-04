@@ -2,6 +2,7 @@
 	display: flex;
 	align-items: center;
 	padding: 5px;
+	border-radius: 5px;
 	cursor: pointer;
 
 	&__icon {
@@ -17,10 +18,5 @@
 		font-size: 16px;
 		font-weight: 700;
 		text-transform: uppercase;
-	}
-
-	&:hover,
-	&:focus {
-		background-color: rgba($gray-400, 0.5);
 	}
 }

@@ -11,6 +11,7 @@
 	border-radius: 50%;
 	border: none;
 	cursor: pointer;
+	transition: background-color 0.2 ease;
 
 	&__icon {
 		width: 18px;
@@ -32,7 +33,7 @@
 
 		&:hover,
 		&:focus {
-			background-color: darken($primary, 10%);
+			background-color: $primary-light;
 		}
 	}
 }

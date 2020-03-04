@@ -3,10 +3,4 @@ mixin language-list(props = {})
 
   ul.language-list&attributes(attributes)
     li.language-list__item
-      +language({lang: 'en'})
-    li.language-list__item
-      +language({lang: 'de'})
-    li.language-list__item
-      +language({lang: 'fr'})
-    li.language-list__item
-      +language({lang: 'dme'})
+      +language({lang: 'en', iconId: 'english'})

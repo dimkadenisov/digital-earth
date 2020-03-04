@@ -19,7 +19,7 @@
 
 	&:hover,
 	&:focus {
-		background-color: darken($gray-200, 10%);
+		background-color: lighten($gray-500, 10%);
 	}
 
 	&_size_s {
@@ -34,7 +34,7 @@
 
 		&:hover,
 		&:focus {
-			background-color: darken($primary, 10%);
+			background-color: $primary-light;
 		}
 	}
 
