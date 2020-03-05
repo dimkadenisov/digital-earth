@@ -88,6 +88,10 @@
 			color: darken($primary, 10%);
 		}
 	}
+
+	img {
+		max-width: 100%;
+	}
 }
 
 .images-block {
@@ -98,10 +102,6 @@
 		flex-grow: 1;
 		flex-shrink: 1;
 		margin: 0 0 20px 0;
-
-		img {
-			width: 100%;
-		}
 
 		&:nth-last-child(n + 2) {
 			margin-right: 24px;
@@ -209,14 +209,14 @@
 				margin-top: 10px;
 			}
 		}
+	}
 
-		.images-block {
-			flex-wrap: wrap;
+	.images-block {
+		display: block;
 
-			figure {
-				&:nth-last-child(n + 2) {
-					margin-right: 0;
-				}
+		figure {
+			&:nth-last-child(n + 2) {
+				margin-right: 0;
 			}
 		}
 	}

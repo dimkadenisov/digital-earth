@@ -1,4 +1,7 @@
 .collapse {
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+
 	&__inner {
 		padding-right: 30px;
 		padding-left: 30px;
@@ -18,7 +21,8 @@
 	&_opened {
 		margin-bottom: 23px;
 		padding-bottom: 12px;
-		border-bottom: 1px solid $gray-200;
+		border-top-color: $gray-200;
+		border-bottom-color: $gray-200;
 
 		.collapse-heading__triangle {
 			transform: rotate(180deg);

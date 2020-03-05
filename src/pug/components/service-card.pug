@@ -6,7 +6,7 @@ mixin service-card(props = {})
   include buttons-group
   include button
 
-  - const { imgObjectFit, imgSrc, name, productsGroups } = props;
+  - const { imgObjectFit, imgSrc, name, productsGroups, productsGroupsAttrs } = props;
   -
     const rootClasses = [
       imgObjectFit === 'cover' && 'service-card_cover',
@@ -19,7 +19,7 @@ mixin service-card(props = {})
       +service-card-name= name
       +products-block
         each props in productsGroups
-          +products-group(props)
+          +products-group(props)&attributes(productsGroupsAttrs)
       +buttons-group(class="visually-hidden")
         +button({tag: 'a', size: 's', color: 'violet'})(href="#")
           |Открыть карту
