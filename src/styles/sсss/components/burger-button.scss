@@ -26,6 +26,12 @@
 	}
 }
 
+@media (-ms-high-contrast: none) {
+	.burger-button {
+		margin-left: auto;
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.burger-button {
 		display: inline-block;
