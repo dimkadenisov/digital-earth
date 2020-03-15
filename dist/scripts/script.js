@@ -162,17 +162,6 @@ document.querySelectorAll('.language').forEach(function (language) {
 });
 "use strict";
 
-document.querySelectorAll('.switch').forEach(function (item) {
-  if (item.nextElementSibling.classList.contains('switch-tab')) {
-    item.querySelector('.switch__input').addEventListener('click', function (e) {
-      item.parentNode.querySelectorAll('.switch-tab').forEach(function (tab) {
-        tab.classList.toggle('d_none');
-      });
-    });
-  }
-});
-"use strict";
-
 window.matchMedia('(max-width: 767px)') && document.querySelector('.ready-product') && (document.querySelector('.ready-product').innerText = 'Готовые продукты');
 var mediaQuery = window.matchMedia('(max-width: 767px)');
 document.querySelector('.ready-product') && mediaQuery.addListener(function (e) {
@@ -263,3 +252,14 @@ window.addEventListener('resize', function () {
 });
 addSidebarToBurgerMenu();
 removeSidebarToBurgerMenu();
+"use strict";
+
+document.querySelectorAll('.switch').forEach(function (item) {
+  if (item.nextElementSibling.classList.contains('switch-tab')) {
+    item.querySelector('.switch__input').addEventListener('click', function (e) {
+      item.parentNode.querySelectorAll('.switch-tab').forEach(function (tab) {
+        tab.classList.toggle('d_none');
+      });
+    });
+  }
+});
