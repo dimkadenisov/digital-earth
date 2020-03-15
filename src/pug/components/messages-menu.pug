@@ -5,6 +5,9 @@ mixin messages-menu(props = {})
 
   .messages-menu&attributes(attributes)
     +switch({selected: 'Входящие', unselected: 'Прочитано'})
-    +notifications-list
+    .switch-tab
+      +notifications-list
+    .switch-tab.d_none
+      +notifications-list
     +button({tag: 'a'})(class="button_color_primary")
       |Показать все

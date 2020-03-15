@@ -1,4 +1,4 @@
-const initPoppers = function(button) {
+const initPoppers = function() {
 	document.querySelectorAll('.icon-button').forEach(button => {
 		if (
 			button.nextElementSibling &&

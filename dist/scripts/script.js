@@ -72,7 +72,7 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
-var initPoppers = function initPoppers(button) {
+var initPoppers = function initPoppers() {
   document.querySelectorAll('.icon-button').forEach(function (button) {
     if (button.nextElementSibling && button.nextElementSibling.classList.contains('icon-button-menu') && window.matchMedia('(min-width: 992px)').matches) {
       Popper.createPopper(button, button.nextElementSibling, {
@@ -159,6 +159,17 @@ document.querySelectorAll('.language').forEach(function (language) {
       }, 200);
     }
   });
+});
+"use strict";
+
+document.querySelectorAll('.switch').forEach(function (item) {
+  if (item.nextElementSibling.classList.contains('switch-tab')) {
+    item.querySelector('.switch__input').addEventListener('click', function (e) {
+      item.parentNode.querySelectorAll('.switch-tab').forEach(function (tab) {
+        tab.classList.toggle('d_none');
+      });
+    });
+  }
 });
 "use strict";
 
