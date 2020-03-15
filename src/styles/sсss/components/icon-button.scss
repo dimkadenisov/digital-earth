@@ -11,7 +11,7 @@
 	border-radius: 50%;
 	border: none;
 	cursor: pointer;
-	transition: background-color 0.2 ease;
+	transition: background-color 0.2s ease;
 
 	&__icon {
 		width: 18px;
@@ -21,7 +21,7 @@
 
 	&:hover,
 	&:focus {
-		background-color: rgba($gray-400, 0.5);
+		background-color: rgba($gray-300, 0.5);
 	}
 
 	&_primary {
@@ -34,6 +34,17 @@
 		&:hover,
 		&:focus {
 			background-color: $primary-light;
+		}
+	}
+
+	&_lightgray {
+		.icon-button__icon {
+			color: $gray-400;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: darken($gray-200, 1%);
 		}
 	}
 }

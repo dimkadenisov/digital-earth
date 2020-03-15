@@ -25,6 +25,10 @@
 		font-size: 18px;
 	}
 
+	span {
+		font-size: 16px;
+	}
+
 	p {
 		margin-top: 0;
 		margin-bottom: 15px;
@@ -137,7 +141,7 @@
 	text-transform: uppercase;
 
 	& th {
-		color: $gray-400;
+		color: $gray-300;
 	}
 }
 

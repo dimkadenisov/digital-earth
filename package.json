@@ -43,6 +43,7 @@
 		"stylelint-scss": "^3.9.0"
 	},
 	"dependencies": {
+		"@popperjs/core": "^2.1.0",
 		"objectFitPolyfill": "^2.3.0"
 	},
 	"description": "site for digital-earth company"

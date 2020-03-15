@@ -1,0 +1,9 @@
+mixin avatar(props = {})
+
+  - const { bgImgUrl } = props;
+
+  .avatar&attributes(attributes)
+    if bgImgUrl
+      div.avatar__img(style=`background-image: url(${bgImgUrl})`)
+    else
+      span.avatar__text DE

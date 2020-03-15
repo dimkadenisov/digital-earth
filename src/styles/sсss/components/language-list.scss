@@ -18,10 +18,10 @@
 	}
 
 	&:hover {
-		background-color: rgba($gray-400, 0.5);
+		background-color: rgba($gray-300, 0.5);
 
 		&::before {
-			border-top: 5px solid rgba($gray-400, 0.5);
+			border-top: 5px solid rgba($gray-300, 0.5);
 		}
 	}
 }

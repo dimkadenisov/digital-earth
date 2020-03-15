@@ -1,20 +1,11 @@
 .switch {
 	display: inline-block;
 	position: relative;
+	background-color: $gray-200;
 	border-radius: 17px;
 	cursor: pointer;
 	overflow: hidden;
-
-	&__background {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: $gray-200;
-		border-radius: 17px;
-		transition: background-color 0.1s ease-in-out;
-	}
+	transition: background-color 0.2s ease;
 
 	&__label {
 		display: inline-block;
@@ -50,7 +41,7 @@
 			}
 
 			&:last-of-type {
-				color: $gray-600;
+				color: $gray-400;
 
 				&:after {
 					background-color: transparent;
@@ -62,7 +53,7 @@
 		&:checked {
 			& ~ .switch__label {
 				&:first-of-type {
-					color: $gray-600;
+					color: $gray-400;
 
 					&:after {
 						background-color: transparent;
@@ -83,8 +74,6 @@
 	}
 
 	&:hover {
-		.switch__background {
-			background-color: darken($gray-200, 5%);
-		}
+		background-color: darken($gray-200, 5%);
 	}
 }

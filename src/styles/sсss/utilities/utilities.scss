@@ -9,6 +9,11 @@
 	clip: rect(0 0 0 0);
 }
 
+.visibility_hidden {
+	visibility: hidden;
+	pointer-events: none;
+}
+
 .overflow {
 	&_hidden {
 		overflow: hidden;
@@ -27,10 +32,6 @@
 			overflow-y: hidden;
 		}
 	}
-}
-
-.swiper-wrapper > * {
-	flex-shrink: 0;
 }
 
 .d_flex {
