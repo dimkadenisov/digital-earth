@@ -191,7 +191,7 @@ var columns = document.querySelectorAll('.services-list__column');
 var replaceCardsFromDesktop = function replaceCardsFromDesktop() {
   if (columns.length) {
     if (window.matchMedia('(max-width: 1169px) and (min-width: 768px)').matches) {
-      return columns[2].querySelectorAll('.services-list__item').forEach(function (node, index) {
+      columns[2].querySelectorAll('.services-list__item').forEach(function (node, index) {
         index % 2 === 0 ? columns[0].appendChild(node) : columns[1].appendChild(node);
       });
     }
@@ -210,7 +210,10 @@ var replaceCardsFromDesktop = function replaceCardsFromDesktop() {
 var replaceCardsFromMobile = function replaceCardsFromMobile() {
   if (columns.length) {
     if (window.matchMedia('(min-width: 1170px)').matches) {
-      return document.querySelectorAll('.services-list__item[data-column="2"]').forEach(function (node) {
+      document.querySelectorAll('.services-list__item[data-column="1"]').forEach(function (node) {
+        return columns[1].appendChild(node);
+      });
+      document.querySelectorAll('.services-list__item[data-column="2"]').forEach(function (node) {
         return columns[2].appendChild(node);
       });
     }
