@@ -1,17 +1,21 @@
 const burgerButton = document.querySelector('.burger-button');
-burgerButton.addEventListener('click', function() {
-	this.classList.toggle('burger-button_opened');
+const toggleBurgerMenu = () => {
+	burgerButton.classList.toggle('burger-button_opened');
 	document.body.classList.toggle('overflow_hidden');
-	this.parentNode
+	burgerButton.parentNode
 		.querySelector('.burger-menu')
 		.classList.toggle('burger-menu_opened');
-	this.parentNode.querySelector('.overlay').classList.toggle('d_none');
-	if (this.classList.contains('burger-button_opened')) {
+	burgerButton.parentNode.querySelector('.overlay').classList.toggle('d_none');
+	if (burgerButton.classList.contains('burger-button_opened')) {
 		window.addEventListener('resize', toggleBurgerMenuOnResize);
 	} else {
 		window.removeEventListener('resize', toggleBurgerMenuOnResize);
 	}
-});
+};
+burgerButton.addEventListener('click', toggleBurgerMenu);
+document
+	.querySelector('.burger-clickaway-listener')
+	.addEventListener('click', toggleBurgerMenu);
 
 const toggleBurgerMenuTransition = () => {
 	if (window.matchMedia('(max-width: 991px)').matches) {

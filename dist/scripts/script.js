@@ -1,18 +1,22 @@
 "use strict";
 
 var burgerButton = document.querySelector('.burger-button');
-burgerButton.addEventListener('click', function () {
-  this.classList.toggle('burger-button_opened');
-  document.body.classList.toggle('overflow_hidden');
-  this.parentNode.querySelector('.burger-menu').classList.toggle('burger-menu_opened');
-  this.parentNode.querySelector('.overlay').classList.toggle('d_none');
 
-  if (this.classList.contains('burger-button_opened')) {
+var toggleBurgerMenu = function toggleBurgerMenu() {
+  burgerButton.classList.toggle('burger-button_opened');
+  document.body.classList.toggle('overflow_hidden');
+  burgerButton.parentNode.querySelector('.burger-menu').classList.toggle('burger-menu_opened');
+  burgerButton.parentNode.querySelector('.overlay').classList.toggle('d_none');
+
+  if (burgerButton.classList.contains('burger-button_opened')) {
     window.addEventListener('resize', toggleBurgerMenuOnResize);
   } else {
     window.removeEventListener('resize', toggleBurgerMenuOnResize);
   }
-});
+};
+
+burgerButton.addEventListener('click', toggleBurgerMenu);
+document.querySelector('.burger-clickaway-listener').addEventListener('click', toggleBurgerMenu);
 
 var toggleBurgerMenuTransition = function toggleBurgerMenuTransition() {
   if (window.matchMedia('(max-width: 991px)').matches) {
