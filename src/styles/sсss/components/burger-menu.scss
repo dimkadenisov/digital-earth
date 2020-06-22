@@ -8,11 +8,11 @@
 		padding-left: 30px;
 	}
 
-  .menu-list {
-    &:first-of-type {
-      display: none
-    }
-  }
+	.menu-list {
+		&:first-of-type {
+			display: none;
+		}
+	}
 }
 
 @media screen and (max-width: 991px) {
@@ -21,12 +21,12 @@
 		flex-direction: column;
 		position: fixed;
 		top: 0;
-		right: 0;
+		left: 0;
 		bottom: 0;
 		width: 270px;
 		padding-top: 75px;
 		background-color: $white;
-		transform: translateX(100%);
+		transform: translateX(-100%);
 		transform-origin: top right;
 		overflow-y: auto;
 
@@ -53,9 +53,9 @@
 				margin-bottom: 10px;
 			}
 
-      &:first-of-type {
-        display: flex;
-      }
+			&:first-of-type {
+				display: flex;
+			}
 		}
 
 		.sidebar__inner {
