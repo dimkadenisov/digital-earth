@@ -1,4 +1,5 @@
 mixin icon-buttons-list(props = {})
+  include button
   include icon-button
   include icon-button-menu
   include messages-menu
@@ -15,6 +16,7 @@ mixin icon-buttons-list(props = {})
       +icon-button-menu
         +site-sections-menu
     li.icon-buttons-list__item
-      +icon-button({tag: 'a', iconId: 'user'})(class="icon-button_primary" href="#")
+      +icon-button({tag: 'a'})(class="icon-button_gray-600" href="#")
+        |Т
       +icon-button-menu
         +user-menu

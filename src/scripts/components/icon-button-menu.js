@@ -23,22 +23,26 @@ const initPoppers = function() {
 			button.addEventListener('click', function(event) {
 				if (window.matchMedia('(min-width: 992px)').matches) {
 					event.preventDefault();
+					if (this.nextElementSibling.classList.contains('visibility_hidden')) {
+						this.closest('.icon-buttons-list')
+							.querySelectorAll('.icon-button-menu')
+							.forEach(item => {
+								item.classList.add('visibility_hidden');
+							});
+						this.nextElementSibling.classList.remove('visibility_hidden');
+						event.stopPropagation();
+						document.addEventListener(
+							'click',
+							handleIconButtonClickAway(button.nextElementSibling),
+						);
+					} else {
+						this.nextElementSibling.classList.add('visibility_hidden');
+						document.removeEventListener(
+							'click',
+							handleIconButtonClickAway(button.nextElementSibling),
+						);
+					}
 				}
-				if (this.nextElementSibling.classList.contains('visibility_hidden')) {
-					this.closest('.icon-buttons-list')
-						.querySelectorAll('.icon-button-menu')
-						.forEach(item => {
-							item.classList.add('visibility_hidden');
-						});
-					this.nextElementSibling.classList.remove('visibility_hidden');
-					event.stopPropagation();
-				} else {
-					this.nextElementSibling.classList.add('visibility_hidden');
-				}
-				document.addEventListener(
-					'click',
-					handleIconButtonClickAway(button.nextElementSibling),
-				);
 			});
 		}
 	});

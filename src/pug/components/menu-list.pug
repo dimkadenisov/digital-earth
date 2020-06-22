@@ -1,9 +1,10 @@
 mixin menu-list(props = {})
   include link
+  include icon-link
 
-  - const { items } = props;
+  - const { component, componentProps } = props;
 
   ul.menu-list&attributes(attributes)
-    each item in items
+    each props in componentProps
       li.menu-list__item
-        +link= item
+        +#{component}(props)

@@ -9,7 +9,10 @@ mixin icon-button(props = {})
     ];
 
   #{tag}.icon-button(class= rootClassList)&attributes(attributes)
-    svg.icon-button__icon
-      use(xlink:href=`#${iconId}`)
+    if iconId
+      svg.icon-button__icon
+        use(xlink:href=`#${iconId}`)
+    if block
+      block
     if counter
       +button-counter= counter

@@ -5,6 +5,8 @@ mixin header(props = {})
   include burger-button
   include burger-menu
   include icon-buttons-list
+  include user-avatar
+  include icon-link
 
   .header&attributes(attributes)
     .container
@@ -12,5 +14,7 @@ mixin header(props = {})
         +logo
         +burger-button
         +burger-menu
-          +menu-list({items: ['Новости', 'Контакты', 'Войти']})
+          +user-avatar
+          +menu-list({component: 'icon-link', componentProps: [{iconId: 'user', text: 'Личный кабинет'}, {iconId: 'shopping-basket', text: 'Заказы'}, {iconId: 'logout', text: 'Выход'}]})
+          +menu-list({component: 'link', componentProps: [{text: 'О проекте'}, {text: 'Контакты'}]})
           +icon-buttons-list
