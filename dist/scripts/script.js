@@ -78,7 +78,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 var initPoppers = function initPoppers() {
   document.querySelectorAll('.icon-button').forEach(function (button) {
-    if (button.nextElementSibling && button.nextElementSibling.classList.contains('icon-button-menu') && window.matchMedia('(min-width: 992px)').matches) {
+    if (button.nextElementSibling && button.nextElementSibling.classList.contains('icon-button-menu') && window.matchMedia('(min-width: 768px)').matches) {
       Popper.createPopper(button, button.nextElementSibling, {
         placement: 'bottom-end',
         strategy: 'fixed',
@@ -92,7 +92,7 @@ var initPoppers = function initPoppers() {
         }]
       });
       button.addEventListener('click', function (event) {
-        if (window.matchMedia('(min-width: 992px)').matches) {
+        if (window.matchMedia('(min-width: 768px)').matches) {
           event.preventDefault();
 
           if (this.nextElementSibling.classList.contains('visibility_hidden')) {
@@ -122,13 +122,13 @@ function handleIconButtonClickAway(menu) {
 }
 
 window.addEventListener('resize', function () {
-  if (window.matchMedia('(min-width: 992px)').matches && _toConsumableArray(document.querySelectorAll('.icon-button-menu')).some(function (item) {
+  if (window.matchMedia('(min-width: 768px)').matches && _toConsumableArray(document.querySelectorAll('.icon-button-menu')).some(function (item) {
     return !item.hasAttribute('data-popper-placement');
   })) {
     initPoppers();
   }
 
-  if (window.matchMedia('(max-width: 991px)').matches) {
+  if (window.matchMedia('(max-width: 767px)').matches) {
     document.querySelectorAll('.icon-button-menu').forEach(function (item) {
       item.classList.add('visibility_hidden');
     });

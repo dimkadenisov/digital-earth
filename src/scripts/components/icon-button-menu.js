@@ -3,7 +3,7 @@ const initPoppers = function() {
 		if (
 			button.nextElementSibling &&
 			button.nextElementSibling.classList.contains('icon-button-menu') &&
-			window.matchMedia('(min-width: 992px)').matches
+			window.matchMedia('(min-width: 768px)').matches
 		) {
 			Popper.createPopper(button, button.nextElementSibling, {
 				placement: 'bottom-end',
@@ -21,7 +21,7 @@ const initPoppers = function() {
 				],
 			});
 			button.addEventListener('click', function(event) {
-				if (window.matchMedia('(min-width: 992px)').matches) {
+				if (window.matchMedia('(min-width: 768px)').matches) {
 					event.preventDefault();
 					if (this.nextElementSibling.classList.contains('visibility_hidden')) {
 						this.closest('.icon-buttons-list')
@@ -59,7 +59,7 @@ function handleIconButtonClickAway(menu) {
 
 window.addEventListener('resize', () => {
 	if (
-		window.matchMedia('(min-width: 992px)').matches &&
+		window.matchMedia('(min-width: 768px)').matches &&
 		[...document.querySelectorAll('.icon-button-menu')].some(
 			item => !item.hasAttribute('data-popper-placement'),
 		)
@@ -67,7 +67,7 @@ window.addEventListener('resize', () => {
 		initPoppers();
 	}
 
-	if (window.matchMedia('(max-width: 991px)').matches) {
+	if (window.matchMedia('(max-width: 767px)').matches) {
 		document.querySelectorAll('.icon-button-menu').forEach(item => {
 			item.classList.add('visibility_hidden');
 		});
