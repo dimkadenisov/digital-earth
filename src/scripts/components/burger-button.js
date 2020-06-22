@@ -18,7 +18,7 @@ document
 	.addEventListener('click', toggleBurgerMenu);
 
 const toggleBurgerMenuTransition = () => {
-	if (window.matchMedia('(max-width: 991px)').matches) {
+	if (window.matchMedia('(max-width: 767px)').matches) {
 		document
 			.querySelector('.burger-menu')
 			.classList.add('burger-menu_transition');
@@ -37,7 +37,7 @@ window.addEventListener('orientationchange', () => {
 	if (
 		burgerButton.classList.contains('burger-button_opened') &&
 		Math.abs(window.orientation) === 90 &&
-		screen.availHeight > 991
+		screen.availHeight > 767
 	) {
 		burgerButton.classList.remove('burger-button_opened');
 		document.body.classList.remove('overflow_hidden');
@@ -50,7 +50,7 @@ window.addEventListener('orientationchange', () => {
 
 function toggleBurgerMenuOnResize() {
 	if (
-		window.matchMedia('(min-width: 992px)').matches &&
+		window.matchMedia('(min-width: 768px)').matches &&
 		burgerButton.classList.contains('burger-button_opened')
 	) {
 		burgerButton.classList.remove('burger-button_opened');

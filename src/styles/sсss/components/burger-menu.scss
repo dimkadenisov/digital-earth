@@ -15,7 +15,7 @@
 	}
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
 	.burger-menu {
 		align-items: flex-start;
 		flex-direction: column;
@@ -23,7 +23,7 @@
 		top: 0;
 		left: 0;
 		bottom: 0;
-		width: 270px;
+		width: calc(100% - 18px);
 		padding-top: 75px;
 		background-color: $white;
 		transform: translateX(-100%);

@@ -18,6 +18,8 @@
 	}
 
 	&_opened {
+		position: absolute;
+		right: 40px;
 		font-size: 24px;
 
 		&::after {
@@ -32,7 +34,7 @@
 	}
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
 	.burger-button {
 		display: inline-block;
 	}

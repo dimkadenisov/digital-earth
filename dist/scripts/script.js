@@ -19,7 +19,7 @@ burgerButton.addEventListener('click', toggleBurgerMenu);
 document.querySelector('.burger-clickaway-listener').addEventListener('click', toggleBurgerMenu);
 
 var toggleBurgerMenuTransition = function toggleBurgerMenuTransition() {
-  if (window.matchMedia('(max-width: 991px)').matches) {
+  if (window.matchMedia('(max-width: 767px)').matches) {
     document.querySelector('.burger-menu').classList.add('burger-menu_transition');
   } else {
     document.querySelector('.burger-menu').classList.remove('burger-menu_transition');
@@ -29,7 +29,7 @@ var toggleBurgerMenuTransition = function toggleBurgerMenuTransition() {
 toggleBurgerMenuTransition();
 window.addEventListener('resize', toggleBurgerMenuTransition);
 window.addEventListener('orientationchange', function () {
-  if (burgerButton.classList.contains('burger-button_opened') && Math.abs(window.orientation) === 90 && screen.availHeight > 991) {
+  if (burgerButton.classList.contains('burger-button_opened') && Math.abs(window.orientation) === 90 && screen.availHeight > 767) {
     burgerButton.classList.remove('burger-button_opened');
     document.body.classList.remove('overflow_hidden');
     document.querySelector('.burger-menu_opened').classList.remove('burger-menu_opened');
@@ -38,7 +38,7 @@ window.addEventListener('orientationchange', function () {
 });
 
 function toggleBurgerMenuOnResize() {
-  if (window.matchMedia('(min-width: 992px)').matches && burgerButton.classList.contains('burger-button_opened')) {
+  if (window.matchMedia('(min-width: 768px)').matches && burgerButton.classList.contains('burger-button_opened')) {
     burgerButton.classList.remove('burger-button_opened');
     document.body.classList.remove('overflow_hidden');
     burgerButton.parentNode.querySelector('.burger-menu').classList.remove('burger-menu_opened');
