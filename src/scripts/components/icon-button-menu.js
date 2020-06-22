@@ -12,7 +12,7 @@ const initPoppers = function() {
 					{
 						name: 'offset',
 						options: {
-							offset: [10, 35],
+							offset: [10, 18],
 						},
 					},
 					{

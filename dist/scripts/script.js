@@ -85,7 +85,7 @@ var initPoppers = function initPoppers() {
         modifiers: [{
           name: 'offset',
           options: {
-            offset: [10, 35]
+            offset: [10, 18]
           }
         }, {
           name: 'arrow'
