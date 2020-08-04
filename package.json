@@ -2,7 +2,8 @@
 	"name": "digital-earth",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "gulp"
+		"dev": "gulp",
+		"build": "gulp build"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.7.4",
