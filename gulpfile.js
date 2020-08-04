@@ -106,9 +106,6 @@ lazyRequireTask('svg:sprite', './tasks/svg:sprite', {
 				maxWidth: 40,
 				maxHeight: 40,
 			},
-			spacing: {
-				padding: 10,
-			},
 			transform: [
 				{
 					svgo: {

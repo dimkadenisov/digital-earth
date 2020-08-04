@@ -9,10 +9,7 @@
 # production
 /build
 
-# /public
-public.zip
-
-# /dist
+/dist
 dist.zip
 
 # misc
